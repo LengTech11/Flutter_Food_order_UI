@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_food_order_ui/model/food_model.dart';
 import 'package:flutter_food_order_ui/widgets/filter_button.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,6 +23,7 @@ class _HomePageState extends State<HomePage> {
             ),
             buildSearch(),
             buildFilter(),
+            buildFoodList(),
           ],
         ),
       ),
@@ -93,7 +95,7 @@ class _HomePageState extends State<HomePage> {
       margin: EdgeInsets.only(top: 16),
       child: ListView(
         scrollDirection: Axis.horizontal,
-        children: [
+        children: const [
           FilterButton(
             title: "Popular",
             isSelected: true,
@@ -111,6 +113,21 @@ class _HomePageState extends State<HomePage> {
             isSelected: false,
           ),
         ],
+      ),
+    );
+  }
+
+  Widget buildFoodList() {
+    return Container(
+      height: 220,
+      margin: EdgeInsets.only(top: 24),
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: foodList.length,
+        itemBuilder: (context, index) {
+          FoodModel food = foodList[index];
+          return Text(food.name);
+        },
       ),
     );
   }

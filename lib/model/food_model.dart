@@ -15,24 +15,24 @@ class FoodModel {
 
 final List<FoodModel> foodList = [
   FoodModel(
-    name: "Cream and Corn Soup",
+    name: "KFC Chicken fries",
     price: 29.99,
     rating: 4.5,
-    image: "https://source.unsplash.com/200x200/?soup",
+    image: "https://source.unsplash.com/200x200/?kfc-fries-and-chicken",
     description: "LOREM_IPSUM",
   ),
   FoodModel(
-    name: "Chicken Sharma",
+    name: "Chicken Burger",
     price: 12.99,
     rating: 4.5,
-    image: "https://source.unsplash.com/200x200/?chicken",
+    image: "https://source.unsplash.com/200x200/?burger",
     description: "LOREM_IPSUM",
   ),
   FoodModel(
-    name: "Cream and Corn Soup",
+    name: "Drink",
     price: 29.99,
     rating: 4.5,
-    image: "https://source.unsplash.com/200x200/?soup",
+    image: "https://source.unsplash.com/200x200/?drink",
     description: "LOREM_IPSUM",
   ),
   FoodModel(

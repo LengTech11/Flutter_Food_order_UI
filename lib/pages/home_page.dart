@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_food_order_ui/model/food_model.dart';
 import 'package:flutter_food_order_ui/widgets/filter_button.dart';
+import 'package:flutter_food_order_ui/widgets/foot_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -126,7 +127,7 @@ class _HomePageState extends State<HomePage> {
         itemCount: foodList.length,
         itemBuilder: (context, index) {
           FoodModel food = foodList[index];
-          return Text(food.name);
+          return FoodCard(food: food);
         },
       ),
     );
